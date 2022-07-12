@@ -1,64 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Proyecto IKEA
+## Kaysel Nuñez Abreu -- FullStack Developer
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Resumen de la APP
+Primero debemos explicar un poco el proyecto antes de abarcar lo desarrollado.
+"La empresa Ikea estaba preparando un evento especial de aniversario para todos aquellos que deseaban asistir pero estaría limitado solo hasta las 50 personas. El departamento de marketing estaría a cargo de examinar el registro".
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Entonces, ahí entraba el desarrollador, debía crear un sistema encargado de hacer el registro de esas 50 personas. Muy bien, ahora explicaré cómo funciona el que he desarrollado:
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##### ¿Cómo funciona mi aplicacion?
+###### Paso 1- Acceso de la administracion
+La administracion tendrá acceso usando el correo diseñado por el desarrollador, el correo es el siguiente:
 
-## Learning Laravel
+- admin@ikea.com.do
+- 12345
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Este correo debe ser introducido en la zona donde está escrita la palabra "Acceder"; en el menú de navegación, una vez ingresado, podran ver todos los registros que las personas van agregando.
 
-## Laravel Sponsors
+###### Paso 2- El sistema de seguridad
+El sistema de seguridad que tiene nuestra aplicación no tiene nada que envidiarle al resto, aunque, siempre las cosas se pueden perfeccionar. Todos sus campos estan validados con estandares centrados en Laravel, algunas son: 
+1) **Validacion de correo para evitar la repeticion del mismo en la base de datos.**
+2) **Validacion de nombre y apellido con un minimo y maximo de caracteres.**
+3) **Validacion de telefono y edad, solo se pueden aceptar numeros, entre otras caracteristicas.**
+4) **Checkbox para darle un toque mas original.**
+5) **Entre otros...**
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+##### Otros...
+La app tiene un login por el cuál solo puede acceder la administracion para poder ver los registros, posee una interfaz sencilla y el formulario cuenta con una ventana modal cuando los datos se han enviado satisfactoriamente.
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+## Metas
+Debido a compromisos con la universidad, especificamente temporada de exámenes, me vi obligado a empezar el proyecto mas tarde de lo que me habria gustado. Empece a desarrollar el domingo 10/7/2022, hice mi mejor esfuerzo para terminarlo en tiempo record pero es una aplicacion que tiene potencial para mejorar.
+##### Logradas
+-- Validacion de campos requeridos.
+-- Paginado de registros.
+-- Diseño estandarizado.
+-- Limpiar los datos luego de ser enviados.
+-- Implementacion de ventana modal (Decidí añadir una porque los errores estaban cubiertos en su totalidad).
+-- Simulacion puesta a prueba.
+-- El boton no permite que el usuario envie datos varias veces seguidas, queda como algo implicito cuando se valida el correo.
+-- Buscar por correo o nombre.
+-- Filtrar por edad y nombre
 
-## Contributing
+##### no Logradas
+-- Validar usuarios al momento de escribir (Estába a la mitad de terminarlo)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+**Nota:**  Son ejecuciones fáciles de lograr, pero espero hacerlo mas rápido en una segunda ocación.
 
-## Code of Conduct
+#### Ideas con las que el proyecto puede crecer.
+Como dije anteriormente, este proyecto tiene capacidad para crecer y hacerse mas dinamico5; **Podriamos hacer que interactue con quien se registra, en caso de que alguien quiera anular la suscripcion al evento prodríamos enviarle un código para que este se loguee y cancela la suscripción sin tener que registrarse.**
+--Hay muchas posibilidades de mejorar dicha aplicacion.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Pasos requeridos para instalar la app en un entorno.
+Los pasos para instalar nuestra app en un entorno de trabajo son los siguientes:
 
-## Security Vulnerabilities
+### Instalación
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Paso a paso de lo que debes ejecutar para tener el proyecto ejecutandose
 
-## License
+ 1. Primero que nada, clic en Fork 
+ 2. Inicia el git dentro de tu servidor:
+    
+    git init
+    
+ 3. Luego, clona el repositorio dentro de la carpeta de tu servidor con el siguiente comando:
+    
+    git clone https://github.com/Kaysel12/IKEA-Challenge.git
+    
+ 4. Ingresa a la carpeta del repositorio
+    
+    cd repositorio
+    
+ 5. Instala las dependencias del proyecto
+    
+    composer install
+   
+6. Importar base de Datos
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+ 7. Crea el archivo ".env" copiando la información del archivo .env example y cambiar valores de su Base de datos.
+ 
+ 8. Ejecute las migraciones
+    
+    php artisan migrate --seed
+    
+ 9. Inicialice el servidor local
+    
+    php artisan serve
+    
+ 10. Listo, ya podrá visualizar e interactuar con el proyecto en local.
